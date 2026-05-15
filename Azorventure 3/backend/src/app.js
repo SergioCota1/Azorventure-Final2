@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json({ limit: '20mb' }));
 
 // Serve static files from frontend dist folder
-const frontendDistPath = path.join(__dirname, '../frontend/dist');
+const frontendDistPath = path.join(__dirname, '../../frontend/dist');
 app.use(express.static(frontendDistPath));
 
 // app.use((req, res, next) => {
