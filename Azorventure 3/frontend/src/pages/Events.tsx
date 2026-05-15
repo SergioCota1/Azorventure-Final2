@@ -1053,7 +1053,7 @@ const Events: React.FC = () => {
             <IonModal
                 isOpen={showOrganizerModal}
                 onDidDismiss={() => setShowOrganizerModal(false)}
-                cssClass="organizer-fullscreen-modal"
+                className="organizer-fullscreen-modal"
             >
                 <IonHeader>
                     <IonToolbar>
