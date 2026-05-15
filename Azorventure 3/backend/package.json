@@ -1,0 +1,42 @@
+{
+  "name": "azorventure1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "node -e \"const{execSync}=require('child_process');try{const r=execSync('netstat -ano').toString().split('\\n').find(l=>l.includes(':5000')&&l.includes('LISTENING'));if(r){const pid=r.trim().split(/\\s+/).pop();execSync('taskkill /PID '+pid+' /F',{stdio:'ignore'})}}catch(e){}\"",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergioCota1/Azorventure.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/SergioCota1/Azorventure/issues"
+  },
+  "homepage": "https://github.com/SergioCota1/Azorventure#readme",
+  "dependencies": {
+    "axios": "^1.14.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.22.1",
+    "express-validator": "^7.3.1",
+    "firebase-admin": "^13.6.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^9.0.0",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^8.0.4",
+    "qrcode": "^1.5.4",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

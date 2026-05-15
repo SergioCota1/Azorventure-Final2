@@ -1,0 +1,13 @@
+.home-brand-title {
+	display: inline-flex;
+	align-items: center;
+}
+
+.home-brand-title__logo {
+  width: 110px;
+  max-width: 30vw;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: brightness(0) invert(1);
+}
