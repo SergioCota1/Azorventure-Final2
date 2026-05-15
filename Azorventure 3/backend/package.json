@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prestart": "node -e \"const{execSync}=require('child_process');try{const r=execSync('netstat -ano').toString().split('\\n').find(l=>l.includes(':5000')&&l.includes('LISTENING'));if(r){const pid=r.trim().split(/\\s+/).pop();execSync('taskkill /PID '+pid+' /F',{stdio:'ignore'})}}catch(e){}\"",
+    "build:frontend": "cd ../frontend && npm install && npm run build && cd ../backend",
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
   },
